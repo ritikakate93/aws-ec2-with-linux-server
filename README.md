@@ -42,7 +42,7 @@ This project demonstrates how to host a static website using an **AWS EC2 instan
 ```bash
 chmod 400 your-key.pem
 ssh -i "your-key.pem" ubuntu@your-ec2-public-ip
-
+```
 
 ### Step 3: commands for enable httpd  
 
@@ -50,21 +50,33 @@ ssh -i "your-key.pem" ubuntu@your-ec2-public-ip
 2.	Install httpd  # yum install httpd -y
 3.  Download zip file of project  # curl –O url of zip file
 4.	Unzip file   # unzip filename
-5.	Move folder to /var/www/html/ directory   
-      #  mv foldername/*   /var/www/html/
-6.	Start http service 
-      # systemctl start httpd
-      # systemctl enable httpd
-
+5.	Move folder to /var/www/html/ directory    
+    ```  #  mv foldername/*   /var/www/html/  ```
+7.	Start http service
+  ```
+    # systemctl start httpd
+    # systemctl enable httpd 
+```
 
 ### Step 4: View Your Website
-Open your EC2 instance’s public IPv4 address in a browser:
-
-http://<your-ec2-ip>
+Open your EC2 instance’s public IPv4 address in a browser: http://<your-ec2-ip> 
 
 
 🧠 Learning Outcomes
-=> Launch and connect to EC2 instances
-=> Deploy static content using the Linux CLI
-=> Configure firewall and public access for cloud-hosted apps
++ Launch and connect to EC2 instances
++ Deploy static content using the Linux CLI
++ Configure firewall and public access for cloud-hosted apps
 
+📈 Future Enhancements
++ SSL configuration using Let's Encrypt
++ Custom domain setup via Route 53
++ Use of CloudFront CDN for performance
++ Automate deployment using CI/CD pipelines
+
+📄 License
+This project is licensed under the MIT License.
+
+🙌 Acknowledgements
+Thanks to AWS documentation, open-source communities, and Linux server guides.
+
+```
